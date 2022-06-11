@@ -1,29 +1,10 @@
 import constants from './constacts';
+import { createAction } from '@reduxjs/toolkit';
 
-export const setFilterValue = value => {
-  return {
-    type: constants.SET_FILTER,
-    payload: value,
-  };
-};
+export const setFilterValue = createAction(constants.SET_FILTER);
 
-export const addContact = contact => {
-  return {
-    type: constants.ADD_CONTACT,
-    payload: contact,
-  };
-};
+export const addContact = createAction(constants.ADD_CONTACT);
 
-export const delContact = id => {
-  return {
-    type: constants.DEL_CONTACT,
-    payload: id,
-  };
-};
+export const delContact = createAction(constants.DEL_CONTACT);
 
-export const updContacts = contacts => {
-  return {
-    type: constants.UPD_CONTACTS,
-    payload: contacts,
-  };
-};
+export const updContacts = createAction(constants.UPD_CONTACTS);
