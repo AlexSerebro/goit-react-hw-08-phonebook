@@ -1,8 +1,7 @@
 import style from './Form.module.css';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'redux/actions';
-import shortid from 'shortid';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/selectors';
 
 export function Form() {
@@ -21,11 +20,10 @@ export function Form() {
       return;
     }
     const contact = {
-      id: shortid.generate(),
       name: name,
-      number: number,
+      phone: number,
     };
-    localStorage.setItem('contacts', JSON.stringify([...contacts, contact]));
+    // localStorage.setItem('contacts', JSON.stringify([...contacts, contact]));
     dispatch(addContact(contact));
   };
 

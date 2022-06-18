@@ -4,16 +4,14 @@ import { Section } from '../Section/';
 import { Form } from '../Form';
 import { Contacts } from './Contacts';
 import { Filter } from '../Filter';
-import { updContacts } from '../../redux/actions';
 import { useDispatch } from 'react-redux';
+import { fetchContacts } from 'redux/operations';
 
 export function PhoneBook() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (localStorage.getItem('contacts')) {
-      dispatch(updContacts(JSON.parse(localStorage.getItem('contacts'))));
-    }
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
