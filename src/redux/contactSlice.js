@@ -3,7 +3,6 @@ import { fetchContacts, delContact, addContact } from './operations';
 
 const contactsSlice = createSlice({
   name: 'contacts',
-
   initialState: [],
 
   extraReducers: {
