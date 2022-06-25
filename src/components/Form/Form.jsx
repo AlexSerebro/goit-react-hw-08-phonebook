@@ -21,9 +21,8 @@ export function Form() {
     }
     const contact = {
       name: name,
-      phone: number,
+      number: number,
     };
-    // localStorage.setItem('contacts', JSON.stringify([...contacts, contact]));
     dispatch(addContact(contact));
   };
 

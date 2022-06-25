@@ -13,19 +13,19 @@ export const Contacts = () => {
   const getVisibleContacts = () => {
     const normalazedFilter = filter.toLowerCase();
     // console.log(contacts);
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalazedFilter)
-    );
+    return contacts.filter(contact => {
+      return contact.name.toLowerCase().includes(normalazedFilter);
+    });
   };
   return (
     <>
       <div className={style.wraper}>
         <ul className={style.list}>
-          {getVisibleContacts().map(({ id, name, phone }) => (
+          {getVisibleContacts().map(({ id, name, number }) => (
             <li key={id} className={style.list_item}>
               <div>
                 <p className={style.item_text}>{name}:</p>
-                <p className={style.item_text}>{phone}</p>
+                <p className={style.item_text}>{number}</p>
               </div>
               <button
                 className={style.button}
