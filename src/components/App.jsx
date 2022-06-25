@@ -1,19 +1,19 @@
-import { PhoneBook } from "./PhoneBook";
-
+import { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { PhoneBook } from './PhoneBook';
+import Container from './Container/Container';
+import { AppBar } from './AppBar';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <PhoneBook/>
-    </div>
+    <Container>
+      <AppBar />
+
+      {/* <Suspense fallback={<p>Loading</p>}>
+        <Routes>
+          <Route path="phonebook" element={<PhoneBook />} />
+        </Routes>
+      </Suspense> */}
+    </Container>
   );
 };
