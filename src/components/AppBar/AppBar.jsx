@@ -1,3 +1,4 @@
+import { AuthNav } from 'components/AuthNav/AuthNav';
 import { UserMenu } from 'components/UserMenu';
 import { Navigation } from '../Navigation';
 import s from './Appbar.module.css';
@@ -10,7 +11,7 @@ export function AppBar() {
       <Navigation />
       {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
       <UserMenu />
-      {/* <AuthNav /> */}
+      <AuthNav />
     </header>
   );
 }
