@@ -11,10 +11,10 @@ export function UserMenu() {
   return (
     <div className={s.container}>
       <img src={avatar} alt="" width="32" className={s.avatar} />
-      <span className={s.name}>Добро пожаловать, </span>
+      <span className={s.name}>Wellcome, </span>
       <button type="button">
         {/* <button type="button" onClick={() => dispatch(authOperations.logOut())}> */}
-        Выйти
+        Logout
       </button>
     </div>
   );

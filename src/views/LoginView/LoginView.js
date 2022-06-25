@@ -8,16 +8,16 @@ export function LoginView() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // const handleChange = ({ target: { name, value } }) => {
-  //   switch (name) {
-  //     case 'email':
-  //       return setEmail(value);
-  //     case 'password':
-  //       return setPassword(value);
-  //     default:
-  //       return;
-  //   }
-  // };
+  const handleChange = ({ target: { name, value } }) => {
+    switch (name) {
+      case 'email':
+        return setEmail(value);
+      case 'password':
+        return setPassword(value);
+      default:
+        return;
+    }
+  };
 
   // const handleSubmit = e => {
   //   e.preventDefault();
@@ -33,7 +33,12 @@ export function LoginView() {
       <form onSubmit={() => {}} className={s.form} autoComplete="off">
         <label className={s.label}>
           Email
-          <input type="email" name="email" value={email} onChange={() => {}} />
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
         </label>
 
         <label className={s.label}>
@@ -42,7 +47,7 @@ export function LoginView() {
             type="password"
             name="password"
             value={password}
-            onChange={() => {}}
+            onChange={handleChange}
           />
         </label>
 

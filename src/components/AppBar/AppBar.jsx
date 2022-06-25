@@ -10,8 +10,8 @@ export function AppBar() {
     <header className={s.header}>
       <Navigation />
       {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
-      <UserMenu />
       <AuthNav />
+      <UserMenu />
     </header>
   );
 }
