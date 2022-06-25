@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { authOperations } from '../redux/auth';
+import { login } from '../../redux/auth/authOperations';
 import s from './Login.module.css';
 
 export function LoginView() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,18 +19,18 @@ export function LoginView() {
     }
   };
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   dispatch(authOperations.logIn({ email, password }));
-  //   setEmail('');
-  //   setPassword('');
-  // };
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(login({ email, password }));
+    setEmail('');
+    setPassword('');
+  };
 
   return (
     <div>
       <h1>Login page</h1>
 
-      <form onSubmit={() => {}} className={s.form} autoComplete="off">
+      <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
         <label className={s.label}>
           Email
           <input
