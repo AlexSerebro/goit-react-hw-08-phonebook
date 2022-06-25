@@ -3,14 +3,14 @@ import { fetchContacts, delContact, addContact } from './operations';
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  
+
   initialState: [],
 
   extraReducers: {
     [fetchContacts.fulfilled]: (_, { payload }) => payload,
     [addContact.fulfilled]: (state, { payload }) => [...state, payload],
-    [delContact.fulfilled]: (state, { payload }) => [
-      ...state.filter(contact => contact.id !== payload.id),
+    [delContact.fulfilled]: (state, { meta }) => [
+      ...state.filter(contact => contact.id !== meta.arg),
     ],
   },
 });

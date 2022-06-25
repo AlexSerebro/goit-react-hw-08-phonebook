@@ -12,7 +12,7 @@ export const Contacts = () => {
 
   const getVisibleContacts = () => {
     const normalazedFilter = filter.toLowerCase();
-    // console.log(contacts);
+
     return contacts.filter(contact => {
       return contact.name.toLowerCase().includes(normalazedFilter);
     });
