@@ -5,6 +5,7 @@ import Container from './Container/Container';
 import { AppBar } from './AppBar';
 import { HomeView } from 'views/HomeView/HomeView';
 import { LoginView } from 'views/LoginView/LoginView';
+import RegisterView from 'views/RegisterView/RegisterView';
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
           <Route exact="true" path="/" element={<HomeView />} />
           <Route path="phonebook" element={<PhoneBook />} />
           <Route path="login" element={<LoginView />} />
+          <Route path="register" element={<RegisterView />} />
         </Routes>
       </Suspense>
     </Container>

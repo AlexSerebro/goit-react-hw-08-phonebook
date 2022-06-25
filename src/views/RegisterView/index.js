@@ -1,0 +1,1 @@
+import { RegisterView } from './RegisterView';
