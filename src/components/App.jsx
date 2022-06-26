@@ -27,7 +27,6 @@ export const App = () => {
     !isFetchingCurrentUser && (
       <Container>
         <AppBar />
-
         <Suspense fallback={<h1>Loading</h1>}>
           <Routes>
             <Route path="/goit-react-hw-08-phonebook" element={<HomeView />} />
@@ -50,7 +49,7 @@ export const App = () => {
             <Route
               path="register"
               element={
-                <PublicRoute redirectTo="/">
+                <PublicRoute redirectTo="/goit-react-hw-08-phonebook">
                   <RegisterView />
                 </PublicRoute>
               }

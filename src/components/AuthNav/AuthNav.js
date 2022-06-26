@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
 import s from './AuthNav.module.css';
 
 export function AuthNav() {
@@ -10,14 +11,14 @@ export function AuthNav() {
         exact="true"
         className={({ isActive }) => (isActive ? s.link_active : s.link)}
       >
-        Register
+        <Button variant="outlined">Register</Button>
       </NavLink>
       <NavLink
         to="/login"
         exact="true"
         className={({ isActive }) => (isActive ? s.link_active : s.link)}
       >
-        Login
+        <Button variant="outlined">Login</Button>
       </NavLink>
     </div>
   );

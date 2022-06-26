@@ -9,9 +9,11 @@ export function AppBar() {
   const isLoggedIn = useSelector(getIsLoggedIn);
 
   return (
-    <header className={s.header}>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </header>
+    <div className={s.fixed}>
+      <header className={s.header}>
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </header>
+    </div>
   );
 }

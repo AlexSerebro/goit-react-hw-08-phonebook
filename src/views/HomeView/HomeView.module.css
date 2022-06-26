@@ -1,12 +1,18 @@
 .container{
   min-height: calc(100vh-50px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+    background: url('./bgimg1.jpg') no-repeat;
+    background-size: 100%;
+    height: 100vh;
+  
+    
 }
 
 .title{
-  font-weight: 500;
-  font-size: 48;
+  font-weight: 700;
+  font-size: 60;
   text-align: center;
+  color: rgb(0, 0, 0);
 }

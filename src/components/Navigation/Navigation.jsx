@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getIsLoggedIn } from 'redux/auth/authSelectors';
+import { Button } from '@mui/material';
 import s from './Navigation.module.css';
 
 export const Navigation = () => {
@@ -13,7 +14,7 @@ export const Navigation = () => {
         to="goit-react-hw-08-phonebook/"
         className={({ isActive }) => (isActive ? s.link_active : s.link)}
       >
-        Home
+        <Button variant="outlined">Home</Button>
       </NavLink>
 
       {isLoggedIn && (
@@ -21,7 +22,7 @@ export const Navigation = () => {
           to="/contacts"
           className={({ isActive }) => (isActive ? s.link_active : s.link)}
         >
-          Phonebook
+          <Button variant="outlined">Phonebook</Button>
         </NavLink>
       )}
     </nav>
