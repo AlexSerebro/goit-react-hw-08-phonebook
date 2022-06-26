@@ -58,6 +58,5 @@ export const fetchCurrentUser = createAsyncThunk(
     } catch (error) {
       console.error();
     }
-    console.log('token - null2');
   }
 );

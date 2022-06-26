@@ -6,7 +6,6 @@ import { getFilterValue } from 'redux/selectors';
 export const Filter = () => {
   const dispatch = useDispatch();
   const value = useSelector(getFilterValue);
-  console.log(value);
 
   function handleFilterValue(e) {
     dispatch(filterActions.setFilterValue(e.target.value));

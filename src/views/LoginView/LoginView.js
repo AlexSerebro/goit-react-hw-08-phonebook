@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/authOperations';
 import s from './Login.module.css';
 
-export function LoginView() {
+function LoginView() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -56,3 +56,5 @@ export function LoginView() {
     </div>
   );
 }
+
+export default LoginView;

@@ -1,17 +1,18 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, lazy } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { PhoneBook } from './PhoneBook';
 import Container from './Container/Container';
 import { AppBar } from './AppBar';
-import { HomeView } from 'views/HomeView/HomeView';
-import { LoginView } from 'views/LoginView/LoginView';
-import RegisterView from 'views/RegisterView/RegisterView';
 import { fetchCurrentUser } from '../redux/auth/authOperations';
 import { PrivateRoute } from './UserMenu/PrivateRoute';
 import { PublicRoute } from './UserMenu/PublicRoute';
 import { getIsFetchingCurrent } from '../redux/auth/authSelectors';
+
+const HomeView = lazy(() => import('../views/HomeView/HomeView'));
+const LoginView = lazy(() => import('../views/LoginView/LoginView'));
+const RegisterView = lazy(() => import('../views/RegisterView/RegisterView'));
 
 export const App = () => {
   const dispatch = useDispatch();
