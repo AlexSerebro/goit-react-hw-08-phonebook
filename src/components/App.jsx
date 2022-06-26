@@ -36,7 +36,7 @@ export const App = () => {
           <Route
             path="login"
             element={
-              <PublicRoute>
+              <PublicRoute redirectTo="/contacts">
                 <LoginView />
               </PublicRoute>
             }
@@ -44,7 +44,7 @@ export const App = () => {
           <Route
             path="register"
             element={
-              <PublicRoute>
+              <PublicRoute redirectTo="/">
                 <RegisterView />
               </PublicRoute>
             }
