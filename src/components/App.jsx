@@ -27,7 +27,7 @@ export const App = () => {
       <Container>
         <AppBar />
 
-        <Suspense fallback={<p>Loading</p>}>
+        <Suspense fallback={<h1>Loading</h1>}>
           <Routes>
             <Route path="/goit-react-hw-08-phonebook" element={<HomeView />} />
             <Route
