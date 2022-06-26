@@ -8,6 +8,8 @@ import { HomeView } from 'views/HomeView/HomeView';
 import { LoginView } from 'views/LoginView/LoginView';
 import RegisterView from 'views/RegisterView/RegisterView';
 import { fetchCurrentUser } from '../redux/auth/authOperations';
+import { PrivateRoute } from './UserMenu/PrivateRoute';
+import { PublicRoute } from './UserMenu/PublicRoute';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -22,10 +24,31 @@ export const App = () => {
 
       <Suspense fallback={<p>Loading</p>}>
         <Routes>
-          <Route exact="true" path="/" element={<HomeView />} />
-          <Route path="phonebook" element={<PhoneBook />} />
-          <Route path="login" element={<LoginView />} />
-          <Route path="register" element={<RegisterView />} />
+          <Route path="/" element={<HomeView />} />
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoute>
+                <PhoneBook />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublicRoute>
+                <LoginView />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <PublicRoute>
+                <RegisterView />
+              </PublicRoute>
+            }
+          />
         </Routes>
       </Suspense>
     </Container>

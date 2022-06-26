@@ -13,7 +13,7 @@ export const Navigation = () => (
     </NavLink>
 
     <NavLink
-      to="/phonebook"
+      to="/contacts"
       className={({ isActive }) => (isActive ? s.link_active : s.link)}
     >
       Phonebook
