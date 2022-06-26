@@ -29,7 +29,7 @@ export const App = () => {
 
         <Suspense fallback={<p>Loading</p>}>
           <Routes>
-            <Route path="/" element={<HomeView />} />
+            <Route path="/goit-react-hw-08-phonebook" element={<HomeView />} />
             <Route
               path="contacts"
               element={

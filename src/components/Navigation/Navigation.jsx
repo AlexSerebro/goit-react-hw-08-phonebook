@@ -10,7 +10,7 @@ export const Navigation = () => {
       <NavLink
         end
         exact="true"
-        to="/"
+        to="goit-react-hw-08-phonebook/"
         className={({ isActive }) => (isActive ? s.link_active : s.link)}
       >
         Home
