@@ -5,8 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-// import Link from '@mui/material/Link';
-// import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
@@ -25,9 +23,6 @@ function Copyright(props) {
       {...props}
     >
       {'Copyright © '}
-      {/* <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '} */}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -118,18 +113,6 @@ export default function SignIn() {
             >
               Sign In
             </Button>
-            {/* <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid> */}
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
@@ -137,64 +120,3 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
-
-// import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { login } from '../../redux/auth/authOperations';
-// import s from './Login.module.css';
-
-// function LoginView() {
-//   const dispatch = useDispatch();
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleChange = ({ target: { name, value } }) => {
-//     switch (name) {
-//       case 'email':
-//         return setEmail(value);
-//       case 'password':
-//         return setPassword(value);
-//       default:
-//         return;
-//     }
-//   };
-
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//     dispatch(login({ email, password }));
-//     setEmail('');
-//     setPassword('');
-//   };
-
-//   return (
-//     <div>
-//       <h1>Login page</h1>
-
-//       <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
-//         <label className={s.label}>
-//           Email
-//           <input
-//             type="email"
-//             name="email"
-//             value={email}
-//             onChange={handleChange}
-//           />
-//         </label>
-
-//         <label className={s.label}>
-//           Password
-//           <input
-//             type="password"
-//             name="password"
-//             value={password}
-//             onChange={handleChange}
-//           />
-//         </label>
-
-//         <button type="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default LoginView;

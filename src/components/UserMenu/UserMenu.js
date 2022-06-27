@@ -17,9 +17,6 @@ export function UserMenu() {
       <Button variant="contained" onClick={() => dispatch(logOut())}>
         Logout
       </Button>
-      {/* <button type="button" onClick={() => dispatch(logOut())}>
-        Logout
-      </button> */}
     </div>
   );
 }

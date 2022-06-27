@@ -3,7 +3,7 @@ import s from './HomeView.module.css';
 
 const HomeView = () => (
   <div className={s.container}>
-    <h1 className={s.title}>The Best of the Best of phonebooks</h1>
+    <h1 className={s.title}>Phonebook</h1>
   </div>
 );
 

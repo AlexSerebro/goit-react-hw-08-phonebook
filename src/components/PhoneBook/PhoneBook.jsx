@@ -1,4 +1,3 @@
-import style from './PhoneBook.module.css';
 import { useEffect } from 'react';
 import { Section } from '../Section/';
 import { Form } from '../Form';
@@ -15,9 +14,8 @@ export function PhoneBook() {
   }, [dispatch]);
 
   return (
-    <Section title="PhoneBook">
+    <Section>
       <Form />
-      <p className={style.text}>Contacts</p>
       <Filter />
       <Contacts />
     </Section>

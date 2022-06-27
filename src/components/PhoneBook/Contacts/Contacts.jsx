@@ -2,7 +2,8 @@ import style from './Contacts.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { delContact } from 'redux/operations';
 import { getContacts, getFilterValue } from 'redux/selectors';
-// import store from '../../../redux/store';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const Contacts = () => {
   const filter = useSelector(getFilterValue);
@@ -20,19 +21,22 @@ export const Contacts = () => {
   return (
     <>
       <div className={style.wraper}>
+        <h3 className={style.text}>Contacts</h3>
         <ul className={style.list}>
           {getVisibleContacts().map(({ id, name, number }) => (
             <li key={id} className={style.list_item}>
-              <div>
+              <div className={style.contact}>
                 <p className={style.item_text}>{name}:</p>
                 <p className={style.item_text}>{number}</p>
               </div>
-              <button
-                className={style.button}
+
+              <Button
+                variant="outlined"
+                startIcon={<DeleteIcon />}
                 onClick={() => dispatch(delContact(id))}
               >
                 Delete
-              </button>
+              </Button>
             </li>
           ))}
         </ul>

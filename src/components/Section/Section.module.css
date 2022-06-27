@@ -2,6 +2,8 @@
   display: block;
   max-width: 800px;
   min-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
 
 }
 

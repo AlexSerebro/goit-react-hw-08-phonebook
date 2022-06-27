@@ -1,11 +1,17 @@
 .wraper{
-  margin-left: 20px;
+text-align: center;
+
 }
 
 .text{
   font-size: 25px;
+  font-weight: 600;
   margin-top: 20px;
   margin-bottom: 30px;
+  font-family: "Roboto",
+      "Helvetica",
+      "Arial",
+      sans-serif;
   
 }
 .list{
@@ -23,12 +29,22 @@
 }
 
 .item_text{
-  display: inline;
-  padding-left: 10px;
+  display: block;
+  padding-left: 20px;
+    font-family: "Roboto",
+        "Helvetica",
+        "Arial",
+        sans-serif;
 }
 
 .button{
   margin-left: 20px;
   width: 50px;
   height: 20px;
+}
+
+.contact{
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
 }
