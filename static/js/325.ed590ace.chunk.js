@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[325],{9325:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});n(2791);var o="HomeView_container__hYD4n",r="HomeView_title__GXw8J",s=n(184),a=function(){return(0,s.jsx)("div",{className:o,children:(0,s.jsx)("h1",{className:r,children:"The Best of the Best of phonebooks"})})}}}]);
-//# sourceMappingURL=325.ed590ace.chunk.js.map
