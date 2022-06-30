@@ -7,6 +7,7 @@ import s from './Appbar.module.css';
 
 export function AppBar() {
   const isLoggedIn = useSelector(getIsLoggedIn);
+  console.log(isLoggedIn);
 
   return (
     <div className={s.fixed}>
